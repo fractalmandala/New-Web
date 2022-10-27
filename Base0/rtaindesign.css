@@ -92,6 +92,12 @@ h1{
   font-weight: 600;
   line-height: 1em;
 }
+.rta-button{
+    font-size: 1rem;
+    font-variant: small-caps;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
 .h0{
   font-size: 8rem;
   margin: 0;
