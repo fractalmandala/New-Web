@@ -1,22 +1,213 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/fractalmandala/New-Web/master/Base0/rtaindesign.css">
+  <link rel="stylesheet" type="text/css" href="./rtaindesign.css">
+  <style>
+    .randomer {
+      position: relative;
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 35%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .sidebar>div {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .sidebar h1 {
+      font-weight: 900;
+      font-size: 34px;
+      margin-bottom: 10px;
+      margin-top: -30px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .main-slide {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 35%;
+      width: 65%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .main-slide>div {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      height: 100%;
+      width: 100%;
+    }
+
+    selector button {
+      background-color: #fff;
+      border: none;
+      color: #aaa;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 15px;
+    }
+
+    selector button:hover {
+      color: #222;
+    }
+
+    selector button:focus {
+      outline: none;
+    }
+
+    .randomer .controls button {
+      position: absolute;
+      left: 35%;
+      top: 50%;
+      z-index: 100;
+    }
+
+    .randomer .controls .down-button {
+      transform: translateX(-100%);
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    .randomer .controls .up-button {
+      transform: translateY(-100%);
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  </style>
 </head>
+
 <body>
-  <div class="rta-2col">
-    <h1>a standard h1</h1>
-    <h2>a standard h2</h2>
-    <h3>a standard h3</h3>
-    <h4>a standard h4</h4>
-    <h5>a standard h5</h5>
-    <h6>a standard h6</h6>
-    <p>a standard paragraph text</p>
-    <a href="">standard hyperlink text</a>
+  <div class="rta-container">
+    <div class="rta-2col">
+      <div class="leftcol">
+        <div class="h0">a standard super text</div>
+        <h1>a standard h1</h1>
+      </div>
+      <div class="rightcol">
+        <h2>a standard h2</h2>
+        <h3>a standard h3</h3>
+        <h4>a standard h4</h4>
+        <h5>a standard h5</h5>
+        <h6>a standard h6</h6>
+        <p>a standard paragraph text</p>
+        <div class="p18">a standard major text</div>
+        <a href="">standard hyperlink text</a>
+      </div>
+    </div>
+    <div class="rta-blankbox">
+      <div class="randomer">
+        <div class="sidebar">
+          <div style="background-image: linear-gradient(235deg, #97abff 10%, #5f5987 100%)">
+            <h1>VR WORLDs</h1>
+            <p>awesome. love. creative.</p>
+          </div>
+          <div style="background-image: linear-gradient(135deg, #3b2667 10%, #bc78ec 100%)">
+            <h1>Magic Trees</h1>
+            <p>awesome. love. creative.</p>
+          </div>
+          <div style="background: linear-gradient(221.87deg, #c247b2 1%, #00a3dd 100%)">
+            <h1>Cyber Unicorns</h1>
+            <p>awesome. love. creative.</p>
+          </div>
+          <div style="background-image: linear-gradient(235deg, #52e5e7 10%, #130cb7 100%)">
+            <h1>It&apos;s a FUTURE</h1>
+            <p>awesome. love. creative.</p>
+          </div>
+        </div>
+        <div class="main-slide">
+          <div
+            style="                                  background-image: url('https://images.unsplash.com/photo-1580428180098-24b353d7e9d9?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzMzUwODg5MA&amp;ixlib=rb-1.2.1&amp;q=85');                                  ">
+          </div>
+          <div
+            style="                                  background-image: url('https://images.unsplash.com/photo-1534823983341-d4e6e4aa046c?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzMzUxMTc4Nw&amp;ixlib=rb-1.2.1&amp;q=85');">
+          </div>
+          <div
+            style="background-image: url('https://images.unsplash.com/photo-1516496636080-14fb876e029d?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzMzUxMjgzOA&amp;ixlib=rb-1.2.1&amp;q=85')">
+          </div>
+          <div
+            style="                                  background-image: url('https://images.unsplash.com/photo-1593508512255-86ab42a8e620?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzMzUxMzc3OA&amp;ixlib=rb-1.2.1&amp;q=85');">
+          </div>
+        </div>
+        <div class="controls">
+          <button class="down-button"><i class="fas fa-arrow-down"></i></button>
+          <button class="up-button"><i class="fas fa-arrow-up"></i></button>
+        </div>
+      </div>
+    </div>
   </div>
+  <script>
+    /* Credit and Tnanks: 
+     SliderJS: Traversy Media,
+     Photos: Unsplash,
+     Fonts: GoogleFonts,
+     DesignCSS: Sara Mazal Web */
+
+    const upBtn = document.querySelector(".up-button");
+    const downBtn = document.querySelector(".down-button");
+    const sidebar = document.querySelector(".sidebar");
+    const container = document.querySelector(".randomer");
+    const mainSlide = document.querySelector(".main-slide");
+    const slideCount = mainSlide.querySelectorAll("div").length;
+
+    let activeSlideIndex = 0;
+
+    sidebar.style.top = `-${(slideCount - 1) * 100}vh`;
+
+    upBtn.addEventListener("click", () => {
+      changeSlide("up");
+    });
+
+    downBtn.addEventListener("click", () => {
+      changeSlide("down");
+    });
+
+    function changeSlide(direction) {
+      if (direction === "up") {
+        activeSlideIndex++;
+        if (activeSlideIndex === slideCount) {
+          activeSlideIndex = 0;
+        }
+      } else if (direction === "down") {
+        activeSlideIndex--;
+        if (activeSlideIndex < 0) {
+          activeSlideIndex = slideCount - 1;
+        }
+      }
+      const height = container.clientHeight;
+
+      mainSlide.style.transform = `translateY(-${activeSlideIndex * height}px)`;
+
+      sidebar.style.transform = `translateY(${activeSlideIndex * height}px)`;
+    }
+/* Credit and Tnanks: 
+       SliderJS: Traversy Media,
+       Fonts: GoogleFonts,
+       Photos: Unsplash,
+       DesignCSS: Sara Mazal Web */
+
+  </script>
 </body>
+
 </html>

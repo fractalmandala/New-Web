@@ -6,3 +6,9 @@ https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js
 https://brhat.in/wp-content/plugins/ultimate-post-kit/assets/js/ultimate-post-kit-site.min.js?ver=2.11.0' id='ultimate-post-kit-site-js
 
 https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.0/js/swiper.min.js
+
+
+<div style="background-image: linear-gradient(235deg, #FE4A49 10%, #7F2525 100%)">
+  <div class="itemtitle">{{item.postsque.title|raw}}</div>
+  <div class="itemsubtitle">{{item.postsque.cf_newtitle}}</div>
+</div>

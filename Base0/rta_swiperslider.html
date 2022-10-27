@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.css">
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+  }
+  .swiper-slide {
+      width: 100vw;
+      height: 100vh;
+      color: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+  }
+  .insider{
+    width: 40vw;
+    height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "itemtitle"
+  "itemsubtitle"
+  "itemexcerpt"
+  "itembutton";
+  align-content: start;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .itemtitle, .itemsubtitle, .itemexcerpt, .itembutton{
+    align-self: start;
+  }
+.swiper-pagination-bullet-active{
+background-color:#fff;
+}
+.color-1{
+  background-image: url("https://picsum.photos/id/1022/6000/3376");
+  position: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.color-2{
+  background-image: url("https://picsum.photos/id/171/2048/1536");
+  position: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.color-3{
+  background-image: url("https://picsum.photos/id/122/4147/2756");
+  position: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.color-4{
+  background-image: url("https://picsum.photos/id/149/3454/2288");
+  position: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.color-5{
+background-color:#3F51B5;
+}
+.color-6{
+background-color:#2196F3;
+}
+  </style>
+</head>
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide color-1">
+          <div class="insider">
+            <div class="item-title">Title</div>
+            <div class="item-subtitle">This is the subtitle.</div>
+            <div class="item-excerpt">This is the excerpt</div>
+            <div class="item-button">PRESS</div>
+          </div>
+        </div>
+        <div class="swiper-slide color-2">Slide 2</div>
+        <div class="swiper-slide color-3">Slide 3</div>
+        <div class="swiper-slide color-4">Slide 4</div>
+        <div class="swiper-slide color-5">Slide 5</div>
+        <div class="swiper-slide color-6">Slide 6</div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.0/js/swiper.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    direction: 'horizontal',
+    slidesPerView: 1,
+    paginationClickable: true,
+    spaceBetween: 0,
+    mousewheelControl: true,
+    parallax: true,
+    speed: 600,
+
+});
+</script>
+</body>
+</html>
