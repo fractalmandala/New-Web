@@ -1,7 +1,157 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
-*{
-  box-sizing: border-box;
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0px;
 }
-body{
-  font-family:'Source Sans Pro',sans-serif;
+
+img {
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  -o-object-fit: cover;
+  overflow: hidden;
+}
+
+em {
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.4em;
+  margin: 0px;
+}
+
+.rta-maincontainer {
+  display: grid;
+  margin: 0px;
+  padding: 0px;
+}
+
+.rta-blankbox {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "area-blankbox";
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+}
+
+.rta-2col40 {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "area-2col40-one area-2col40-two";
+}
+
+.rta-2col60 {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "area-2col60-one area-2col60-two";
+  height: 100vh;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.rta-2col60-one {
+  display: grid;
+  grid-area: area-2col60-one;
+  height: 99%;
+}
+
+.rta-2col60-two {
+  display: grid;
+  grid-area: area-2col60-two;
+  height: 99%;
+}
+
+/*mobiles*/
+@media screen and (max-width: 480px) {
+  em {
+    font-size: 1.1em;
+  }
+
+  .rta-2col60 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.2fr 0.8fr;
+    grid-template-areas:
+      "area-2col60-one"
+      "area-2col60-two";
+    height: 100vh;
+    gap: 0px 0px;
+    overflow-y: scroll;
+  }
+
+  .rta-2col60-one {
+    max-width: 100%;
+    grid-area: area-2col60-one;
+  }
+
+  .rta-2col60-two {
+    max-width: 100%;
+    grid-area: area-2col60-two;
+
+  }
+}
+
+/*mobiles to tabs*/
+@media only screen and (min-width: 481px) and (max-width: 672px) {
+  em {
+    font-size: 1.125rem;
+  }
+
+  .rta-2col60 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.1fr 0.9fr;
+    grid-template-areas:
+      "area-2col60-one"
+      "area-2col60-two";
+    max-height: 100vh;
+    gap: 0px 0px;
+    overflow-y: scroll;
+  }
+
+  .rta-2col60-one {
+    max-width: 100%;
+    grid-area: area-2col60-one;
+  }
+
+  .rta-2col60-two {
+    max-width: 100%;
+    grid-area: area-2col60-two;
+  }
+}
+
+/*tabs to pc*/
+@media only screen and (min-width: 673px) {
+  em {
+    font-size: 1.25em;
+  }
+
+  .rta-2col60 {
+    grid-template-columns: 1.5fr 0.5fr;
+    grid-template-rows: 1;
+    grid-template-areas:
+      "area-2col60-one area-2col60-two";
+    max-height: 100vh;
+    gap: 0px 0px;
+    overflow: hidden;
+  }
+
+  .rta-2col60-one {
+    max-width: 100%;
+    height: 100vh;
+    grid-area: area-2col60-one;
+  }
+
+  .rta-2col60-two {
+    max-width: 100%;
+    height: 100vh;
+    grid-area: area-2col60-two;
+  }
 }
