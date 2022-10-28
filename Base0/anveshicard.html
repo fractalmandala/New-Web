@@ -1,95 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-<link rel="stylesheet" href="./anveshicardstyle.css">
+  <link rel="stylesheet" href="./anveshicardstyle.css">
 </head>
+
 <body>
-  <div class="card" data-state="#about">
-    <div class="card-header">
-      <div class="card-cover"></div>
-      <img class="card-avatar" src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt="avatar" />
-      <h1 class="card-fullname">William Rocheald</h1>
-      <h2 class="card-jobtitle">UI Developer</h2>
-    </div>
-    <div class="card-main">
-      <div class="card-section is-active" id="about">
-        <div class="card-content">
-          <div class="card-subtitle">ABOUT</div>
-          <p class="card-desc">Whatever tattooed stumptown art party sriracha gentrify hashtag intelligentsia readymade schlitz brooklyn disrupt.
-          </p>
-        </div>
+  <div class="maincan">
+    <div class="card" data-state="#section1">
+      <div class="card-header"><img class="rtaimg" src="https://brhat.in/wp-content/uploads/2022/10/vijayng1.webp">
       </div>
-      <div class="card-section" id="experience">
-        <div class="card-content">
-          <div class="card-subtitle">WORK EXPERIENCE</div>
-          <div class="card-timeline">
-            <div class="card-item" data-year="2014">
-              <div class="card-item-title">Front-end Developer at <span>JotForm</span></div>
-              <div class="card-item-desc">Disrupt stumptown retro everyday carry unicorn.</div>
-            </div>
-            <div class="card-item" data-year="2016">
-              <div class="card-item-title">UI Developer at <span>GitHub</span></div>
-              <div class="card-item-desc">Developed new conversion funnels and disrupt.</div>
-            </div>
-            <div class="card-item" data-year="2018">
-              <div class="card-item-title">Illustrator at <span>Google</span></div>
-              <div class="card-item-desc">Onboarding illustrations for App.</div>
-            </div>
-            <div class="card-item" data-year="2020">
-              <div class="card-item-title">Full-Stack Developer at <span>CodePen</span></div>
-              <div class="card-item-desc">Responsible for the encomposing brand expreience.</div>
+      <div class="toparea">
+        <div class="rtacard-title">Odisha Chapter</div>
+        <div class="rtacard-subtitle">6D / 5N</div>
+      </div>
+      <div class="card-main">
+        <div class="card-section is-active" id="section1">
+          <div class="card-content">
+            <div class="rtacard-section">ABOUT</div>
+            <p class="rtacard-excerpt">some 2 lines description of the chapter.
+            </p>
+          </div>
+        </div>
+        <div class="card-section" id="section2">
+          <div class="card-content">
+            <div class="rtacard-section">ITINERARY</div>
+            <div class="card-timeline">
+              <div class="card-item" data-year="Day 1">
+                <div class="card-item-title">Front-end Developer at <span>JotForm</span></div>
+                <div class="card-item-desc">Disrupt stumptown retro everyday carry unicorn.</div>
+              </div>
+              <div class="card-item" data-year="Day 2">
+                <div class="card-item-title">UI Developer at <span>GitHub</span></div>
+                <div class="card-item-desc">Developed new conversion funnels and disrupt.</div>
+              </div>
+              <div class="card-item" data-year="Day 3">
+                <div class="card-item-title">Illustrator at <span>Google</span></div>
+                <div class="card-item-desc">Onboarding illustrations for App.</div>
+              </div>
+              <div class="card-item" data-year="Day 4">
+                <div class="card-item-title">Full-Stack Developer at <span>CodePen</span></div>
+                <div class="card-item-desc">Responsible for the encomposing brand expreience.</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="card-section" id="contact">
-        <div class="card-content">
-          <div class="card-subtitle">CONTACT</div>
-          <div class="card-contact-wrapper">
-            <div class="card-contact">
-              Algonquin Rd, Three Oaks Vintage, MI, 49128
+        <div class="card-section" id="section3">
+          <div class="card-content">
+            <div class="rtacard-section">REGISTER</div>
+            <div class="card-contact-wrapper">
+              <div class="card-contact">
+                Will insert enrollment form here
+              </div>
+              <div class="card-contact">
+                (Link to same form)</div>
+              <button class="contact-me">LEARN MORE</button>
             </div>
-            <div class="card-contact">
-            (269) 756-9809</div>
-            <div class="card-contact">
-              william@rocheald.com
-            </div>
-            <button class="contact-me">WORK TOGETHER</button>
           </div>
         </div>
-      </div>
-      <div class="card-buttons">
-        <button data-section="#about" class="is-active">ABOUT</button>
-        <button data-section="#experience">EXPERIENCE</button>
-        <button data-section="#contact">CONTACT</button>
+        <div class="card-buttons">
+          <button data-section="#section1" class="is-active">ABOUT</button>
+          <button data-section="#section2">ITINERARY</button>
+          <button data-section="#section3">REGISTER</button>
+        </div>
       </div>
     </div>
   </div>
   <script>
     const buttons = document.querySelectorAll(".card-buttons button");
-const sections = document.querySelectorAll(".card-section");
-const card = document.querySelector(".card");
+    const sections = document.querySelectorAll(".card-section");
+    const card = document.querySelector(".card");
 
-const handleButtonClick = e => {
-  const targetSection = e.target.getAttribute("data-section");
-  const section = document.querySelector(targetSection);
-  targetSection !== "#about" ?
-  card.classList.add("is-active") :
-  card.classList.remove("is-active");
-  card.setAttribute("data-state", targetSection);
-  sections.forEach(s => s.classList.remove("is-active"));
-  buttons.forEach(b => b.classList.remove("is-active"));
-  e.target.classList.add("is-active");
-  section.classList.add("is-active");
-};
+    const handleButtonClick = e => {
+      const targetSection = e.target.getAttribute("data-section");
+      const section = document.querySelector(targetSection);
+      targetSection !== "#section1" ?
+        card.classList.add("is-active") :
+        card.classList.remove("is-active");
+      card.setAttribute("data-state", targetSection);
+      sections.forEach(s => s.classList.remove("is-active"));
+      buttons.forEach(b => b.classList.remove("is-active"));
+      e.target.classList.add("is-active");
+      section.classList.add("is-active");
+    };
 
-buttons.forEach(btn => {
-  btn.addEventListener("click", handleButtonClick);
-});
+    buttons.forEach(btn => {
+      btn.addEventListener("click", handleButtonClick);
+    });
   </script>
 </body>
+
 </html>
