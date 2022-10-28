@@ -3,6 +3,81 @@
 *{
   box-sizing: border-box;
 }
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #272727;
+  margin: 0;
+}
+p{
+  font-size: 1rem;
+  line-height: 1.25em;
+}
+h6{
+  font-size: .75rem;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+h5{
+  font-size:1.414rem; 
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.125em;
+}
+h4{
+  font-size: 2rem;
+  margin: 0;
+  line-height: 1.125em;
+}
+h3{
+  font-size: 2.8rem;
+  margin: 0;
+  line-height: 1em;
+}
+h2{
+  font-size: 4rem;
+  margin: 0;
+  line-height: 1em;
+}
+h1{
+  font-size: 5.6rem;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1em;
+}
+.whiteh1{
+  color: white;
+  text-align: center;
+  align-self: center;
+}
+.h0{
+  font-size: 8rem;
+  margin: 0;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+  line-height: 1em;
+}
+.p18{
+  font-size: 1.125rem;
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.25em;
+}
+a{
+  text-decoration: none;
+}
+img{
+  width: max-content;
+  object-fit: cover;
+}
+.rta-button{
+  font-size: 1rem;
+  font-variant: small-caps;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 #imghold1{
   background-image: url("https://picsum.photos/id/1022/6000/3376");
   position: cover;
@@ -43,91 +118,41 @@
   height: 100%;
   background-color: black;
 }
-
-/*mobile view*/
-@media only screen and (max-width: 480px) {
-
-body{
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #272727;
-}
-a{
-  text-decoration: none;
-}
-p{
-  font-size: 1rem;
-  line-height: 1.25em;
-}
-h6{
-  font-size: .75rem;
-  margin: 0;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-h5{
-  font-size:1.414rem; 
-  margin: 0;
-  font-weight: 700;
-  line-height: 1.125em;
-}
-h4{
-  font-size: 2rem;
-  margin: 0;
-  line-height: 1.125em;
-}
-h3{
-  font-size: 2.8rem;
-  margin: 0;
-  line-height: 1em;
-}
-h2{
-  font-size: 4rem;
-  margin: 0;
-  line-height: 1em;
-}
-h1{
-  font-size: 5.6rem;
-  margin: 0;
-  font-weight: 600;
-  line-height: 1em;
-}
-.rta-button{
-    font-size: 1rem;
-    font-variant: small-caps;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-.h0{
-  font-size: 8rem;
-  margin: 0;
-  font-weight: 200;
-  text-transform: uppercase;
-  letter-spacing: -4px;
-  line-height: 1em;
-}
-.p18{
-  font-size: 1.125rem;
-  margin: 0;
-  font-weight: 300;
-  line-height: 1.25em;
-}
 .rta-container{
   display: flex;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   margin: 0;
   padding:0;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+.rta-imgbox-full{
+  display: grid;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://brhat.in/wp-content/uploads/2022/08/temple-canva-21.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#imgclass{
+  object-fit: cover;
 }
 .rta-2col{
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas:
-  "leftcol"
-   "rightcol";
-  width: 98vw;
+  "leftcol rightcol";
+  height: 100vh;
+  width: 100vw;
+  align-content: start;
+  align-items: start;
+  scroll-snap-align: start;
 }
 .leftcol{
   grid-column: 1;
@@ -135,103 +160,7 @@ h1{
   padding: 20px;
 }
 .rightcol{
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 1;
-  padding: 20px;
-}
-}
-
-/*desktops view*/
-@media only screen and (min-width: 992px){
-  body{
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #272727;
-  }
-  a{
-    text-decoration: none;
-  }
-  p{
-    font-size: 1rem;
-    line-height: 1.25em;
-  }
-  h6{
-    font-size: .75rem;
-    margin: 0;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  h5{
-    font-size:1.414rem; 
-    margin: 0;
-    font-weight: 700;
-    line-height: 1.125em;
-  }
-  h4{
-    font-size: 2rem;
-    margin: 0;
-    line-height: 1.125em;
-  }
-  h3{
-    font-size: 2.8rem;
-    margin: 0;
-    line-height: 1em;
-  }
-  h2{
-    font-size: 4rem;
-    margin: 0;
-    line-height: 1em;
-  }
-  h1{
-    font-size: 5.6rem;
-    margin: 0;
-    font-weight: 600;
-    line-height: 1em;
-  }
-  .h0{
-    font-size: 8rem;
-    margin: 0;
-    font-weight: 200;
-    text-transform: uppercase;
-    letter-spacing: -4px;
-    line-height: 1em;
-  }
-  .p18{
-    font-size: 1.125rem;
-    margin: 0;
-    font-weight: 300;
-    line-height: 1.25em;
-  }
-  .rta-container{
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding:0;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-  }
-  .rta-2col{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-    "leftcol rightcol";
-    height: 100vh;
-    width: 98vw;
-    align-content: start;
-    align-items: start;
-    scroll-snap-align: start;
-  }
-  .leftcol{
-    grid-column: 1;
-    grid-row: 1;
-    padding: 20px;
-  }
-  .rightcol{
-    grid-column: 2;
-    grid-row: 1;
-    padding: 20px 20px 20px 88px;
-  }
+  padding: 20px 20px 20px 88px;
 }
