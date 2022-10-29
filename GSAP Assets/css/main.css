@@ -1,0 +1,17 @@
+body {
+  ...
+  scroll-behavior: smooth;
+  background: #0f292e;
+	...
+}
+
+img {
+  display: block;
+}
+
+.lines {
+  position: fixed;
+  top: -100px;
+  left: 0px;
+  z-index: -100;
+}
