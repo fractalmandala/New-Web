@@ -113,15 +113,37 @@
       color: white;
     }
     .rta-gridbox-main{
-      grid-template-columns: 3fr 6fr;
-      grid-template-rows: 3fr;
+      grid-template-columns: 2fr 6fr;
+      grid-template-rows: 1fr;
       grid-template-areas: 
-      "rta-singlecol bolitem1 bolitem2 bolitem3"
-      "rta-singlecol bolitem4 bolitem5 bolitem6"
-      "rta-singlecol bolitem7 bolitem8 bolitem9";
+      "rta-singlecol bolitemshold";
       gap: 0px 0px;
     }
-    
+    .rta-singlecol{
+      display: grid;
+      grid-area: rta-singlecol;
+    }
+    .bolitemshold{
+      display: grid;
+      grid-area: bolitemshold;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+      "bolitem1 bolitem2 bolitem3"
+      "bolitem4 bolitem5 bolitem6"
+      "bolitem7 bolitem8 bolitem9";
+    }
+
+    .bolitem{
+      display: grid;
+      background-color: #d7d7d7;
+      margin: 4px;
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .bolitem1{grid-area: bolitem1;}
+    .bolitem2{grid-area: bolitem2;}
+
   </style>
 </head>
 
@@ -246,7 +268,18 @@
 
       </div>
       <div class="rta-gridbox-main">
-        <div 
+        <div class="rta-singlecol"></div>
+        <div class="bolitemsholder">
+        <div class="bolitem bolitem1"></div>
+        <div class="bolitem bolitem2"></div>
+        <div class="bolitem bolitem3"></div>
+        <div class="bolitem bolitem4"></div>
+        <div class="bolitem bolitem5"></div>
+        <div class="bolitem bolitem6"></div>
+        <div class="bolitem bolitem7"></div>
+        <div class="bolitem bolitem8"></div>
+        <div class="bolitem bolitem9"></div>
+      </div>
       </div>
 
     </section>
